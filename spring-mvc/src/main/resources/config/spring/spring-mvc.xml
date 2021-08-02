@@ -12,6 +12,7 @@
     
 	<context:component-scan base-package="kr.co.mlec" />
     <mvc:annotation-driven>
+    	
     	<mvc:message-converters>
     		<bean class="org.springframework.http.converter.StringHttpMessageConverter">
     			<property name="supportedMediaTypes">
@@ -42,7 +43,9 @@
     
     
 	<mvc:default-servlet-handler />
+	
 	<mvc:view-resolvers>
+		<!-- 포워드 시킬 파일의 실제 주소임  -->
 		<mvc:jsp prefix="/WEB-INF/jsp/" suffix=".jsp" />
 	</mvc:view-resolvers>
 

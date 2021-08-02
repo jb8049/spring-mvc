@@ -7,9 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- *.do로 보내면, 해당하는 컨트롤러가 실행되도록 RequestMapping annotation으로 지정해놓음  -->
 	<a href="<%= request.getContextPath() %>/hello/hello.do">hello</a><br>
 	<a href="<%= request.getContextPath() %>/method/method.do">method</a><br>
+	
+	<!-- /form으로 시작하면 MemberController로 보냄 -->
 	<a href="<%= request.getContextPath() %>/form/joinForm.do">form</a><br>
+	
 	<a href="<%= request.getContextPath() %>/ajax/resBody.do">문자열 응답</a><br>
 	<a href="<%= request.getContextPath() %>/ajax/resBody.json">json 응답</a><br>
 	<a href="<%= request.getContextPath() %>/ajax/resVOBody.json">json vo 응답</a><br>

@@ -20,7 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class MemberController {
 	
 	
-	//spring-mvc/form/joinForm.do 이런 형식임  
+	// spring-mvc/form/joinForm.do 이런 형식임  
 	@RequestMapping("/joinForm.do")
 	public String joinForm() {
 		
@@ -118,7 +118,7 @@ public class MemberController {
 //	
 	
 	//*공유영역에 등록하는 방법 3가지
-	//직접 Request
+	//직접 RequestParam
 	//ModelAndView 객체에 등록해서 return
 	//아예 Model 객체 받아와서 모델에 등록시킬 객체를 넣음
 	

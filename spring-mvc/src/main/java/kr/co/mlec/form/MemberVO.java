@@ -2,9 +2,13 @@ package kr.co.mlec.form;
 
 public class MemberVO {
 	
+	// 컨트롤러에서 MemberVO에 바로 set을 한 채로 값을 들고 올 수 있음
+	// form에서 넘어오는 파라미터의 name과 VO의 멤버변수와 동일해야함
+	
 	private String id;
 	private String password;
 	private String name;
+	
 	public String getId() {
 		return id;
 	}

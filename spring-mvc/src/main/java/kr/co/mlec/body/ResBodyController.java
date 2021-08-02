@@ -18,7 +18,7 @@ import kr.co.mlec.form.MemberVO;
 public class ResBodyController {
 	
 	@RequestMapping("/resBody.do")
-	@ResponseBody
+	@ResponseBody // .jsp로 인식하지 않고, 바로 응답을 하도록 한다!!
 	public String resStringBody() {
 		
 		//포워드 시킬 주소를 넘기는게 아니라, 단순 문자열을 넘기네!
@@ -32,10 +32,9 @@ public class ResBodyController {
 		return "OK, 성공" ;
 	}
 	
-	
 	// 오잉 .do가 아니고, .json? xml에 mapping추가
 	@RequestMapping("/resBody.json")
-	@ResponseBody
+	@ResponseBody // 포워드 하지 않고, json으로 변형된 값 바로 반환
 	public Map<String,String> resJsonBody(){
 		
 		Map<String, String> result = new HashMap<String,String>();
@@ -45,7 +44,7 @@ public class ResBodyController {
 		
 		// map을 json형으로 변경해주어야함, 한글 인코딩도 해야함
 		// spring-mvc로
-		// map을 json으로 변경하기 위해 메이븐 jackson
+		// map을 json으로 변경하기 위해 '메이븐 jackson'
 		
 		return result;
 	}
@@ -86,7 +85,7 @@ public class ResBodyController {
 	public List<MemberVO> resVOListBody() {
 		
 		List<MemberVO> list = new ArrayList<MemberVO>();
-		for(int i = 0; i < 4; i++) {
+		for(int i = 0; i <= 4; i++) {
 			
 			MemberVO vo = new MemberVO();
 			vo.setId("jb8049");
@@ -94,6 +93,7 @@ public class ResBodyController {
 			vo.setPassword("1234");
 			
 			list.add(vo);
+			
 		}
 		
 		
