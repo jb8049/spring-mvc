@@ -8,8 +8,7 @@
 </head>
 <body>
 	<h2>파일 업로드 테스트</h2>
-	<form method="post" enctype="multipart/form-data"
-		  action="<%=request.getContextPath()%>/file/upload.do">
+	<form method="post" enctype="multipart/form-data" action="<%=request.getContextPath()%>/file/upload.do">
 		<input type="text" name="id" value="test" /><br/>  
 		<input type="file" name="attachFile1" /><br/>
 		<input type="file" name="attachFile2" /><br/>
