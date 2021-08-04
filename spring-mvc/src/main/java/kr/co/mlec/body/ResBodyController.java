@@ -30,6 +30,7 @@ public class ResBodyController {
 		// sping mvc.xml 수정 
 		
 		return "OK, 성공" ;
+		
 	}
 	
 	// 오잉 .do가 아니고, .json? xml에 mapping추가
@@ -44,7 +45,8 @@ public class ResBodyController {
 		
 		// map을 json형으로 변경해주어야함, 한글 인코딩도 해야함
 		// spring-mvc로
-		// map을 json으로 변경하기 위해 '메이븐 jackson'
+		// Map 자료형을 json으로 변경하기 위해 '메이븐 jackson' dispendency에 추가
+		// Map, VO 객체를 json으로 변경해서 정보를 반환할 수 있음
 		
 		return result;
 	}
